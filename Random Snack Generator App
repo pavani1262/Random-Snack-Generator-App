@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Snack Generator</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+        text-align: center;
+        padding: 50px;
+      }
+      h1 {
+        color: #333;
+      }
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+      button:hover {
+        background-color: #45a049;
+      }
+      .snack {
+        margin-top: 20px;
+        font-size: 24px;
+        font-weight: bold;
+        color: #555;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Random Snack Generator</h1>
+    <p>Not sure what snack to bring? Let the app decide for you!</p>
+    <button onclick="generateSnack()">Get a Snack Idea!</button>
+    <div class="snack" id="snack"></div>
+
+    <script>
+      const snacks = [
+        "Nachos with cheese",
+        "Chocolate chip cookies",
+        "Fresh fruit platter",
+        "Popcorn with butter",
+        "Veggie sticks with hummus",
+        "Trail mix",
+        "Mini sandwiches",
+        "Cupcakes",
+        "Cheese and crackers",
+        "Pretzels",
+        "Chips and salsa",
+        "Ice cream",
+        "Granola bars",
+        "Smoothies",
+        "Doughnuts",
+      ];
+
+      function generateSnack() {
+        const randomIndex = Math.floor(Math.random() * snacks.length);
+        const randomSnack = snacks[randomIndex];
+        document.getElementById("snack").textContent = randomSnack;
+      }
+    </script>
+  </body>
+</html>
